@@ -1,20 +1,7 @@
 [
-  {
-    "id": 1,
-    "name": "Croquetas Premium Perro Adulto",
-    "description": "Alimento para perros adultos.",
-    "price": 12.5,
-    "imageUrl": "",
-    "categoryId": 1,
-    "stock": 20
-  },
-  {
-    "id": 2,
-    "name": "Shampoo Antipulgas",
-    "description": "Control de pulgas.",
-    "price": 8.99,
-    "imageUrl": "",
-    "categoryId": 3,
-    "stock": 15
-  }
+[
+  { "id": 1, "name": "Laptop", "description": "Laptop Gamer", "categoryId": 1, "price": 899 },
+  { "id": 2, "name": "Mouse", "description": "Mouse inalámbrico", "categoryId": 2, "price": 25 }
+]
+
 ]

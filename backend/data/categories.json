@@ -1,22 +1,4 @@
 [
-  {
-    "id": 1,
-    "name": "Alimento"
-  },
-  {
-    "id": 2,
-    "name": "Juguetes"
-  },
-  {
-    "id": 3,
-    "name": "Higiene"
-  },
-  {
-    "id": 4,
-    "name": "Accesorios"
-  },
-  {
-    "id": 5,
-    "name": "Salud"
-  }
+  { "id": 1, "name": "Computadoras" },
+  { "id": 2, "name": "Accesorios" }
 ]
