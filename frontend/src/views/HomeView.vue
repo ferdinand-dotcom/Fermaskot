@@ -41,21 +41,13 @@
         No se encontraron productos con esos filtros.
       </div>
 
-      <div
+      <!-- Usamos ProductCard reutilizable -->
+      <ProductCard
         v-for="p in filteredProducts"
         :key="p.id"
-        class="product-card"
-      >
-        <h3>{{ p.name }}</h3>
-        <p class="description">{{ p.description }}</p>
-        <p class="price">${{ p.price }}</p>
-        <RouterLink
-          :to="'/product/' + p.id"
-          class="btn"
-        >
-          Ver detalles
-        </RouterLink>
-      </div>
+        :product="p"
+        @added-to-cart="addToCart"
+      />
     </div>
   </div>
 </template>
@@ -63,6 +55,8 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import { useProducts } from '../composables/useProducts'
+import ProductCard from '../components/ProductCard.vue'
+import { useCart } from '../composables/useCart'
 
 const search = ref('')
 const selectedCategory = ref('all')
@@ -77,6 +71,9 @@ const {
   loadProducts,
   loadCategories
 } = useProducts()
+
+// carrito compartido en toda la app
+const { addToCart } = useCart()
 
 const filteredProducts = computed(() => {
   const term = search.value.toLowerCase().trim()
@@ -159,45 +156,5 @@ onMounted(() => {
   gap: 30px;
   flex-wrap: wrap;
   margin-top: 20px;
-}
-
-.product-card {
-  width: 260px;
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: 0.2s ease;
-  text-align: left;
-}
-
-.product-card:hover {
-  transform: translateY(-5px);
-}
-
-.description {
-  font-size: 14px;
-  margin: 8px 0 5px;
-  color: #444;
-}
-
-.price {
-  font-size: 18px;
-  color: #457b9d;
-  margin-bottom: 10px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 8px 12px;
-  background: #457b9d;
-  color: white;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: 0.2s;
-}
-
-.btn:hover {
-  background: #1d3557;
 }
 </style>
