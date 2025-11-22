@@ -1,7 +1,74 @@
 [
-[
-  { "id": 1, "name": "Laptop", "description": "Laptop Gamer", "categoryId": 1, "price": 899 },
-  { "id": 2, "name": "Mouse", "description": "Mouse inalámbrico", "categoryId": 2, "price": 25 }
-]
-
+  {
+    "id": 1,
+    "name": "Croquetas Premium Perro Adulto",
+    "description": "Alimento completo para perros adultos, rico en proteínas.",
+    "price": 12.5,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Croquetas+Perro+Adulto",
+    "categoryId": 1,
+    "stock": 20
+  },
+  {
+    "id": 2,
+    "name": "Croquetas Cachorro Raza Pequeña",
+    "description": "Alimento balanceado para cachorros de razas pequeñas.",
+    "price": 14.99,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Croquetas+Cachorro",
+    "categoryId": 1,
+    "stock": 15
+  },
+  {
+    "id": 3,
+    "name": "Shampoo Antipulgas",
+    "description": "Shampoo suave con acción antipulgas y garrapatas.",
+    "price": 8.99,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Shampoo+Antipulgas",
+    "categoryId": 2,
+    "stock": 10
+  },
+  {
+    "id": 4,
+    "name": "Collar Ajustable para Perro",
+    "description": "Collar resistente y ajustable con seguro metálico.",
+    "price": 6.5,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Collar+Perro",
+    "categoryId": 3,
+    "stock": 30
+  },
+  {
+    "id": 5,
+    "name": "Juguete Pelota Mordedora",
+    "description": "Pelota de goma resistente para cuidar la dentadura.",
+    "price": 4.25,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Pelota+Juguete",
+    "categoryId": 3,
+    "stock": 40
+  },
+  {
+    "id": 6,
+    "name": "Vitaminas Complejas para Perro",
+    "description": "Suplemento vitamínico para perros en crecimiento.",
+    "price": 11.0,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Vitaminas",
+    "categoryId": 4,
+    "stock": 18
+  },
+  {
+    "id": 7,
+    "name": "Arena Sanitaria para Gato",
+    "description": "Arena aglomerante de alta absorción.",
+    "price": 9.75,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Arena+Gato",
+    "categoryId": 1,
+    "stock": 25
+  },
+  {
+    "id": 8,
+    "name": "Cepillo de Cerdas Suaves",
+    "description": "Cepillo ideal para el cuidado del pelaje.",
+    "price": 5.9,
+    "imageUrl": "https://via.placeholder.com/300x200?text=Cepillo",
+    "categoryId": 2,
+    "stock": 22
+  }
 ]

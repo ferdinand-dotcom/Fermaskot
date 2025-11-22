@@ -1,17 +1,19 @@
 {
-  "name": "fermaskot-backend",
+  "name": "fermaskot-frontend",
   "version": "1.0.0",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "dev": "nodemon index.js",
-    "start": "node index.js"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "express": "^4.19.0",
-    "cors": "^2.8.5"
+    "vue": "^3.4.4",
+    "vue-router": "^4.2.5"
   },
   "devDependencies": {
-    "nodemon": "^3.0.1"
+    "@vitejs/plugin-vue": "^4.2.3",
+    "vite": "^4.4.9"
   }
 }
 

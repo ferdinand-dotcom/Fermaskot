@@ -1,33 +1,68 @@
-import { ref, computed, onMounted } from 'vue'
+// frontend/src/composables/useProducts.js
+import { ref } from 'vue'
 import { useApi } from './useApi'
 
 export function useProducts() {
-  const { data: products, request: requestProducts } = useApi()
-  const { data: categories, request: requestCategories } = useApi()
+  const {
+    data: productsData,
+    loading,
+    error,
+    get,
+    post,
+    put,
+    del
+  } = useApi()
 
-  const search = ref('')
-  const selectedCategory = ref('')
+  const {
+    data: categoriesData,
+    loading: loadingCategories,
+    error: errorCategories,
+    get: getCategoriesApi
+  } = useApi()
 
-  const loadProducts = () => requestProducts('/api/products')
-  const loadCategories = () => requestCategories('/api/categories')
+  const products = ref([])
+  const categories = ref([])
 
-  const filteredProducts = computed(() => {
-    if (!products.value) return []
-    return products.value.filter(p =>
-      p.name.toLowerCase().includes(search.value.toLowerCase())
-    )
-  })
+  const loadProducts = async () => {
+    const result = await get('/api/products')
+    if (result) products.value = result
+  }
 
-  onMounted(() => {
-    loadProducts()
-    loadCategories()
-  })
+  const loadCategories = async () => {
+    const result = await getCategoriesApi('/api/categories')
+    if (result) categories.value = result
+  }
+
+  const getProductById = async (id) => {
+    return await get(`/api/products/${id}`)
+  }
+
+  const createProduct = async (product) => {
+    return await post('/api/products', product)
+  }
+
+  const updateProduct = async (id, product) => {
+    return await put(`/api/products/${id}`, product)
+  }
+
+  const deleteProduct = async (id) => {
+    return await del(`/api/products/${id}`)
+  }
 
   return {
+    // estados
     products,
     categories,
-    search,
-    selectedCategory,
-    filteredProducts,
+    loading,
+    error,
+    loadingCategories,
+    errorCategories,
+    // acciones
+    loadProducts,
+    loadCategories,
+    getProductById,
+    createProduct,
+    updateProduct,
+    deleteProduct
   }
 }
