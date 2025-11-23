@@ -5,10 +5,6 @@ Permite listar productos, filtrarlos por categoría, buscar por nombre o descrip
 
 > Proyecto académico para la materia de Programación / Aplicaciones Web.
 
-![Listado de productos](./docs/screenshots/fermaskot-home.png)
-![Carrito de compras](./docs/screenshots/fermaskot-cart.png)
-
-
 ## ✨ Características principales
 
 - Listado de productos con:
