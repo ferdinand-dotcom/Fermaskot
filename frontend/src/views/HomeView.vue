@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <!-- Agregamos la clase home-bg al contenedor principal -->
+  <div class="home-bg">
     <h2 class="subtitle">Productos destacados</h2>
 
     <div class="filters">
@@ -104,6 +105,24 @@ onMounted(() => {
 </script>
 
 <style scoped>
+/* 🔹 Fondo con huellitas */
+.home-bg {
+  min-height: 100vh;
+  padding: 20px 15px;
+
+  background-image: url('@/assets/backgrounds/paws.png');
+  background-repeat: repeat;
+  background-size: 220px; /* puedes subir o bajar este valor */
+}
+
+/* Opcional: para que el contenido destaque más */
+.home-bg > * {
+  background-color: rgba(255, 255, 255, 0.82);
+  border-radius: 12px;
+  padding: 10px 15px;
+}
+
+/* Tus estilos de antes */
 .subtitle {
   font-size: 28px;
   color: #1d3557;
