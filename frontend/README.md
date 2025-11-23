@@ -1,5 +1,37 @@
-# Vue 3 + Vite
+# Fermaskot 🐾
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Aplicación web de tienda veterinaria desarrollada con **Vue 3** y **Node.js**, que permite visualizar productos para mascotas, filtrarlos por categoría y añadirlos a un carrito de compras.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+---
+
+## 🧩 Funcionalidades principales
+
+- Listado de productos con imagen, descripción y precio.
+- Filtro por nombre/descripción.
+- Filtro por categorías.
+- Carrito de compras:
+  - Añadir productos.
+  - Ver resumen de lo añadido.
+- Interfaz visual con fondo de huellitas y tarjetas modernas.
+
+---
+
+## 🛠 Tecnologías utilizadas
+
+- **Frontend:**
+  - Vue 3 (Composition API)
+  - Vue Router
+  - HTML, CSS
+- **Backend:**
+  - Node.js
+  - Express
+- **Otros:**
+  - JSON como fuente de datos (productos y categorías)
+  - Git y GitHub para control de versiones
+
+
+> Requisitos: tener instalado **Node.js** y **npm**.
+
+```bash
+git clone <https://github.com/ferdinand-dotcom/Fermaskot.git>
+cd Fermaskot
